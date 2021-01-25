@@ -1,6 +1,7 @@
 import React from "react";
+import Steps from "./components/steps";
  
-class Home extends React.Component {
+class App extends React.Component {
 	constantes ={
     tempMin:-20,
     tempMax: 40,
@@ -12,17 +13,17 @@ class Home extends React.Component {
 
   render() {
     return (
-			<div className="container-fluid">
+			<div className="container">
+        <h1 className="text-primary">hello</h1>
         <div className="row">
           <p>Heart :{this.constantes.heartMin} </p>
           <p>Temperature : {this.constantes.tempMin} </p>
           <p>Steps : {this.constantes.stepsMin} </p>
+          <Steps/>
         </div>
-			
-
 			</div>
 		)
   };
 }
 
-export default Home;
+export default App;
