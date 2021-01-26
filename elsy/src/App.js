@@ -11,6 +11,30 @@ class App extends React.Component {
     stepsMin:0,
     stepsMax:50000
   }
+  Water = {
+    icon:"local_drink",
+    color: "#3A85FF",
+    value: 1.5,
+    unit: "L"
+  }
+  Steps ={
+    icon: "directions_walk",
+    color: "black",
+    value: 3000,
+    unit:"steps"
+  }
+  Heart ={
+    icon: "favorite",
+    color: "red",
+    value: 120,
+    unit: "bpm"
+  }
+  Temperature ={
+    icon: "wb_sunny",
+    color: "yellow",
+    value: -10,
+    unit: "°C"
+  }
 
   render() {
     return (
