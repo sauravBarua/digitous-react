@@ -3,6 +3,16 @@ import Box from "./components/Box";
 import  "./styles/global.css";
  
 class App extends React.Component {
+
+ /* constructor(props) {
+    super(props);
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature: -10,
+      steps: 3000
+    };*/
+ 
 	constantes ={
     tempMin:-20,
     tempMax: 40,
@@ -35,6 +45,7 @@ class App extends React.Component {
     value: -10,
     unit: "°C"
   }
+  
 
   render() {
     return (
