@@ -5,7 +5,10 @@ export class Steps extends React.Component {
     return (
       <div className="box, col-sm-3 col-6">
           <h1>hello from jsx</h1>
-          <i className="directions_walk"></i>
+          <div className="material-icons" style={{fontSize:100,color:"black"}}>
+            {this.props.icons}
+          </div>
+         
       </div>
     );
   }

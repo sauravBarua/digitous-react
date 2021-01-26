@@ -1,5 +1,5 @@
 import React from "react";
-import Steps from "./components/steps";
+import Steps from "./components/Steps";
  
 class App extends React.Component {
 	constantes ={
@@ -13,14 +13,17 @@ class App extends React.Component {
 
   render() {
     return (
-			<div className="container">
+			<div className="container-fluid">
         <h1 className="text-primary">hello</h1>
         <div className="row">
           <p>Heart :{this.constantes.heartMin} </p>
           <p>Temperature : {this.constantes.tempMin} </p>
           <p>Steps : {this.constantes.stepsMin} </p>
+        </div>
+        <div className="row">
           <Steps/>
         </div>
+
 			</div>
 		)
   };
