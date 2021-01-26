@@ -1,5 +1,5 @@
 import React from "react";
-import Steps from "./components/Steps";
+import Box from "./components/Box";
 import  "./styles/global.css";
  
 class App extends React.Component {
@@ -22,7 +22,7 @@ class App extends React.Component {
           <p>Steps : {this.constantes.stepsMin} </p>
         </div>
         <div className="row">
-          <Steps/>
+          <Box/>
         </div>
 
 			</div>
