@@ -1,5 +1,6 @@
 import React from "react";
 import Steps from "./components/Steps";
+import  "./styles/global.css";
  
 class App extends React.Component {
 	constantes ={
