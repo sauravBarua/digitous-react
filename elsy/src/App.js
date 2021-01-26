@@ -23,6 +23,10 @@ class App extends React.Component {
         </div>
         <div className="row">
           <Box/>
+          <Box/>
+          <Box/>
+          <Box/>
+
         </div>
 
 			</div>
