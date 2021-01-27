@@ -39,7 +39,16 @@ class App extends React.Component {
 
    heartMin = 80;
 
- 
+    constructor(props) {
+    super(props);
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature:  -10,
+      steps: 3000
+    };
+ }
+   
   render() {
     return (
 			<div className="container-fluid">

@@ -1,5 +1,5 @@
 const constantes ={
-  tempMin = -20;
+  tempMin: -20;
   tempMax: 40,
   heartMin:80,
   heartMax:180,
@@ -7,6 +7,15 @@ const constantes ={
   stepsMax:50000
 }
  /* constructor(props) {
+    super(props);
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature:  -10,
+      steps: 3000
+    };
+ }*/
+  /* constructor(props) {
     super(props);
     this.state = {
       water: 0,
