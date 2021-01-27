@@ -1,0 +1,35 @@
+
+ /* constructor(props) {
+    super(props);
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature: -10,
+      steps: 3000
+    };*/
+ 
+  Water = {
+    icon:"local_drink",
+    color: "#3A85FF",
+    value: 1.5,
+    unit: "L"
+  }
+  Steps ={
+    icon: "directions_walk",
+    color: "black",
+    value: 3000,
+    unit:"steps"
+  }
+  Heart ={
+    icon: "favorite",
+    color: "red",
+    value: 120,
+    unit: "bpm"
+  }
+  Temperature ={
+    icon: "wb_sunny",
+    color: "yellow",
+    value: -10,
+    unit: "°C"
+  }
+  

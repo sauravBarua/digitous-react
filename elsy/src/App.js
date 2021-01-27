@@ -1,66 +1,39 @@
 import React from "react";
 import Box from "./components/Box";
 import  "./styles/global.css";
+
+const constantes ={
+  tempMin:-20,
+  tempMax: 40,
+  heartMin:80,
+  heartMax:180,
+  stepsMin:0,
+  stepsMax:50000
+}
+const  Water = {
+  icon:"local_drink",
+  color: "#3A85FF",
+  value: 1.5,
+  unit: "L"
+}
  
 class App extends React.Component {
-
- /* constructor(props) {
-    super(props);
-    this.state = {
-      water: 0,
-      heart: 120,
-      temperature: -10,
-      steps: 3000
-    };*/
  
-	constantes ={
-    tempMin:-20,
-    tempMax: 40,
-    heartMin:80,
-    heartMax:180,
-    stepsMin:0,
-    stepsMax:50000
-  }
-  Water = {
-    icon:"local_drink",
-    color: "#3A85FF",
-    value: 1.5,
-    unit: "L"
-  }
-  Steps ={
-    icon: "directions_walk",
-    color: "black",
-    value: 3000,
-    unit:"steps"
-  }
-  Heart ={
-    icon: "favorite",
-    color: "red",
-    value: 120,
-    unit: "bpm"
-  }
-  Temperature ={
-    icon: "wb_sunny",
-    color: "yellow",
-    value: -10,
-    unit: "°C"
-  }
-  
+
 
   render() {
     return (
 			<div className="container-fluid">
-        <h1 className="text-primary">hello</h1>
         <div className="row">
-          <p>Heart :{this.constantes.heartMin} </p>
-          <p>Temperature : {this.constantes.tempMin} </p>
-          <p>Steps : {this.constantes.stepsMin} </p>
+          <p>Heart :{constantes.heartMin} </p>
+          <p>Temperature : {constantes.tempMin} </p>
+          <p>Steps : {constantes.stepsMin} </p>
         </div>
         <div className="row">
-          <Box/>
-          <Box/>
-          <Box/>
-          <Box/>
+          <Box icon={Water.icon} color={Water.color} value={Water.value} unit={Water.unit}/>
+          <Box icon={"directions_walk"} color={"black"} value={3000} unit={"steps"}/>
+          <Box icon={"favorite"} color={"red"} value={120} unit={"bpm"}/>
+          <Box icon={"wb_sunny"} color={"yellow"} value={-10} unit={"°C"}/>
 
         </div>
 
