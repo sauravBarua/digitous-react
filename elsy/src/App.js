@@ -16,11 +16,21 @@ const  Water = {
   value: 1.5,
   unit: "L"
 }
+
+const dataArray = {
+    icon: ["directions_walk","favorite",],
+    color: ["black","red",],
+    value: [ 3000,120,],
+    unit: ["steps","bpm"]
+  }
+
+  const Temperature =["wb_sunny","yellow", -10,"°C"]
+   
  
+ 
+
 class App extends React.Component {
  
-
-
   render() {
     return (
 			<div className="container-fluid">
@@ -31,9 +41,9 @@ class App extends React.Component {
         </div>
         <div className="row">
           <Box icon={Water.icon} color={Water.color} value={Water.value} unit={Water.unit}/>
-          <Box icon={"directions_walk"} color={"black"} value={3000} unit={"steps"}/>
+          <Box icon={dataArray.icon[0]} color={dataArray.color[0]} value={dataArray.value[0]} unit={dataArray.unit[0]}/>
           <Box icon={"favorite"} color={"red"} value={120} unit={"bpm"}/>
-          <Box icon={"wb_sunny"} color={"yellow"} value={-10} unit={"°C"}/>
+          <Box icon={Temperature[0]} color={Temperature[1]} value={Temperature[2]} unit={Temperature[3]}/>
 
         </div>
 
