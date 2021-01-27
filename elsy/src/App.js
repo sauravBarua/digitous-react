@@ -2,14 +2,20 @@ import React from "react";
 import Box from "./components/Box";
 import  "./styles/global.css";
 
+const tempMax = 40;
+const heartMax = 180;
+const stepsMin = 0;
+const stepsMax = 50000;
+
 const constantes ={
-  tempMin:-20,
+  tempMin: -20,
   tempMax: 40,
   heartMin:80,
   heartMax:180,
   stepsMin:0,
   stepsMax:50000
 }
+
 const  Water = {
   icon:"local_drink",
   color: "#3A85FF",
@@ -30,14 +36,17 @@ const dataArray = {
  
 
 class App extends React.Component {
+
+   heartMin = 80;
+
  
   render() {
     return (
 			<div className="container-fluid">
         <div className="row">
-          <p>Heart :{constantes.heartMin} </p>
+          <p>Heart :{this.heartMin} </p>
           <p>Temperature : {constantes.tempMin} </p>
-          <p>Steps : {constantes.stepsMin} </p>
+          <p>Steps : {stepsMin} </p>
         </div>
         <div className="row">
           <Box icon={Water.icon} color={Water.color} value={Water.value} unit={Water.unit}/>
