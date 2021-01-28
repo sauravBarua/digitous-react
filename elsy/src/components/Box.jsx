@@ -6,8 +6,8 @@ class Box extends React.Component {
         if (icon === "local_drink") {
             return (
             <div className="box col-sm-3 col-6">
-                <span className="material-icons" style={{ fontSize: 100, color: color }}>
-                    {icon}
+                <span className="material-icons"  style={{ fontSize: 100, color: color }}>
+                    {icon} 
                 </span>
                 <p>{value}{unit}</p>
             </div>
@@ -15,11 +15,12 @@ class Box extends React.Component {
         } else {
             return (
                 <div className="box col-sm-3 col-6">
-                    <span className="material-icons" style={{ fontSize: 100, color:color }}>
+                    <span className="material-icons"  style={{ fontSize: 100, color:color }}>
                         {icon}
                     </span>
                     <p>{value}{unit}</p>
-                    <input type="range" />
+                    <input type="range" min = {this.props.min} max = {this.props.max} value = {value} onInput = {this.props.onchange} />
+                    
                 </div>
             )
         }
