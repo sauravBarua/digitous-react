@@ -2,15 +2,28 @@ import React from "react";
 
 class Box extends React.Component {
     render() {
-      const {color, value} = this.props;
-        return (
+        const {color,icon,value,unit}= this.props;
+        if (icon === "local_drink") {
+            return (
             <div className="box col-sm-3 col-6">
-                <span className="material-icons" style={{color: color, fontSize: 100}}>
-                    {this.props.icon}
+                <span className="material-icons" style={{ fontSize: 100, color: color }}>
+                    {icon}
                 </span>
-                <p>{value} {this.props.unit}</p>
+                <p>{value}{unit}</p>
             </div>
-        )
+            )
+        } else {
+            return (
+                <div className="box col-sm-3 col-6">
+                    <span className="material-icons" style={{ fontSize: 100, color:color }}>
+                        {icon}
+                    </span>
+                    <p>{value}{unit}</p>
+                    <input type="range" />
+                </div>
+            )
+        }
+       
     }
 }
 
