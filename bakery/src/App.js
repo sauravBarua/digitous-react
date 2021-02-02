@@ -16,13 +16,34 @@ export default class App extends React.Component {
       items
     }
   }
+
+  selectAdd = (event)=>{
+    this.setState({
+
+    })
+  }
+
+  selectList = (event)=>{
+    this.setState({
+      
+    })
+  }
+  
+  selectPay = (event)=>{
+    this.setState({
+      
+    })
+  }
+  
   
   render() {
     return (
       <div>
-        <button/>
-        <button/>
-        <button/>
+        <button onClick= {this.selectAdd} isSelected ={this.state.activeTab === Add} >Add</button>
+        <button onClick= {this.selectList} isSelected ={this.state.activeTab=== List} >List</button>
+        <button onClick= {this.selectPay} isSelected ={this.state.activeTab=== Pay} >Pay</button>
+
+
       </div>
     )
   }
