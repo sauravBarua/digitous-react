@@ -5,6 +5,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      emailValid : false,
+      passwordValid : false,
       email: '',
       password: ''
     }
@@ -12,20 +14,37 @@ class App extends React.Component {
 
 
   onEmailChange = (event)=> {
-    this.setState({email: event.target.value})
+    const email= event.target.value;
+    const reg = /^\S+@\S+\.\S+$/g;
+    const isEmail = reg.test(email)
+
+    this.setState({
+      email,
+      emailValid: isEmail
+    })
   }
 
 
   onPasswordChange=(event)=> {
-    this.setState({password: event.target.value})
+    let newPasswordValid = false;
+    if(event.target.value.leggth >= 6){
+      newPasswordValid = true;
+    }else{
+      newPasswordValid = false;
+    }
+    this.setState({
+      password: event.target.value,
+      passwordValid : newPasswordValid
+    })
   }
 
   handleSubmit =(event)=> {
+    event.preventDefault()
   }
 
   render() {
     return(
-      <div className="App">
+      <div className="container mt-5">
         <form id="contact-form" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email address</label>
