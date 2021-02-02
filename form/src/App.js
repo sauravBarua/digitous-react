@@ -8,7 +8,8 @@ class App extends React.Component {
       emailValid : false,
       passwordValid : false,
       email: '',
-      password: ''
+      password: '',
+      submitClick: false
     }
   }
 
@@ -39,24 +40,40 @@ class App extends React.Component {
   }
 
   handleSubmit =(event)=> {
-    event.preventDefault()
+    this.setState({
+      submitClick: true
+    })
   }
 
   render() {
+    if (this.state.submitClick === true) {
+      return (<div>SUBMIT SUCCESS</div>)
+    }
     return(
       <div className="container mt-5">
         <form id="contact-form" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Email address</label>
-            <input type="email" className="form-control" value={this.state.email} onChange={this.onEmailChange} />
+            <input type="email" 
+            className="form-control" 
+            value={this.state.email} 
+            onChange={this.onEmailChange}
+            className={ this.state.emailValid ? 'form-control is-valid' : 'form-control is-invalid'}
+            />
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input type="password" className="form-control" value={this.state.password} onChange={this.onPasswordChange} />
+            <input type="password" 
+            className="form-control" 
+            value={this.state.password} 
+            onChange={this.onPasswordChange}
+            className={this.state.passwordValid ? 'form-control is-valid' : 'form-control is-invalid'}
+            required
+             />
           </div>
         
           
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary" onChange = {this.handleSubmit} >Submit</button>
         </form>
       </div>
     );
