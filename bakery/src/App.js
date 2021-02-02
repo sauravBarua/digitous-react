@@ -39,9 +39,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick= {this.selectAdd} isSelected ={this.state.activeTab === Add} >Add</button>
-        <button onClick= {this.selectList} isSelected ={this.state.activeTab=== List} >List</button>
-        <button onClick= {this.selectPay} isSelected ={this.state.activeTab=== Pay} >Pay</button>
+        <Button onClick= {this.selectAdd} isSelected ={this.state.activeTab === Add} >Add</Button>
+        <Button onClick= {this.selectList} isSelected ={this.state.activeTab=== List} >List</Button>
+        <Button onClick= {this.selectPay} isSelected ={this.state.activeTab=== Pay} >Pay</Button>
 
 
       </div>
