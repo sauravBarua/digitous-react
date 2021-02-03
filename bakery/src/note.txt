@@ -11,30 +11,26 @@ export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      activeTab:'',
-      isSelected:''
+      activeTab,
+      isSelected,
+      items
     }
   }
 
   selectAdd = (event)=>{
     this.setState({
-      activeTab:"add"
 
     })
   }
 
   selectList = (event)=>{
     this.setState({
-      activeTab:"list"
-
       
     })
   }
   
   selectPay = (event)=>{
     this.setState({
-      activeTab:"pay"
-
       
     })
   }
@@ -43,9 +39,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick= {this.selectAdd} isSelected ={this.state.activeTab === "add"} >Add </Button>
-        <Button onClick= {this.selectList} isSelected ={this.state.activeTab=== "list"} >List</Button>
-        <Button onClick= {this.selectPay} isSelected ={this.state.activeTab=== "pay"} >Pay</Button>
+        <Button onClick= {this.selectAdd} isSelected ={this.state.activeTab === Add} >Add</Button>
+        <Button onClick= {this.selectList} isSelected ={this.state.activeTab=== List} >List</Button>
+        <Button onClick= {this.selectPay} isSelected ={this.state.activeTab=== Pay} >Pay</Button>
 
 
       </div>
