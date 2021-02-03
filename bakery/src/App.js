@@ -19,35 +19,50 @@ export default class App extends React.Component {
   selectAdd = (event)=>{
     this.setState({
       activeTab:"add"
-
     })
   }
 
   selectList = (event)=>{
     this.setState({
       activeTab:"list"
-
-      
     })
   }
   
   selectPay = (event)=>{
     this.setState({
-      activeTab:"pay"
-
-      
+      activeTab:"pay"      
     })
+  }
+
+  checkTab(toCheck){
+    if(this.state.activeTab == toCheck){
+      return true
+    }else{
+      return false
+    }
+  }
+
+  renderContent(){
+    switch(this.state.activeTab){
+      case "add":
+        return <Add></Add>
+      case "list":
+        return <List></List>
+      case "pay":
+        return <Pay></Pay>
+      default:
+        return <Add></Add>
+    }
   }
   
   
   render() {
     return (
       <div>
-        <Button onClick= {this.selectAdd} isSelected ={this.state.activeTab === "add"} >Add </Button>
-        <Button onClick= {this.selectList} isSelected ={this.state.activeTab=== "list"} >List</Button>
-        <Button onClick= {this.selectPay} isSelected ={this.state.activeTab=== "pay"} >Pay</Button>
-
-
+        <Button onClick= {this.selectAdd} isSelected ={this.state.checkTab('add')} >Add </Button>
+        <Button onClick= {this.selectList} isSelected ={this.state.checkTab('list')} >List</Button>
+        <Button onClick= {this.selectPay} isSelected ={this.state.checkTab('pay')} >Pay</Button>
+        {this.renderContent()}
       </div>
     )
   }

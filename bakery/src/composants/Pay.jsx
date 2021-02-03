@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Pay extends Recat.Component {
+export default class Pay extends React.Component {
     render() {
         return (
             <div>
