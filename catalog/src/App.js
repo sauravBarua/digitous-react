@@ -1,24 +1,33 @@
-import React from 'react'
-import {movies} from './Components/data'
+import React from "react";
+import About from "./Components/About";
+import Home from "./Components/Home";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-
-  
- class App extends React.Component {
-  render() {
-    var cardStyle = {
-      height: "200px",
-      width: "150px",
-      padding: 0,
-      margin: " 10px",
-      backgtoundColor:"#FFF",
-      filter: "drop-shadow(0px 0px 5px #666)",
-    }
-    return (
+export default function BasicExample() {
+ 
+  return (
+    <Router>
       <div>
-         {movies.map((item)=><img style= {cardStyle} src={item.image} alt="image" />)}
+        <nav >
+          
+          <Link to="/Home">Home</Link>
+
+          <Link to="/About">About</Link>
+        </nav>
+
+        <hr />
+
+        <Switch>
+          
+          <Route path="/Home">
+            <Home />
+          </Route>
+          <Route path="/About">
+            <About />
+          </Route>
+        </Switch>
       </div>
-    )
-  }
+    </Router>
+  );
 }
-export default App;
