@@ -12,12 +12,22 @@ const movies = [
       "Following the discovery of a new form of space travel as well as Meg's father's disappearance, she, her brother, and her friend must join three magical beings - Mrs. Whatsit, Mrs. Who, and Mrs. Which - to travel across the universe to rescue him from a terrible evil.",
   },];
 
+  
+  
+  
+
  class App extends React.Component {
   render() {
+    var cardStyle = {
+      height: "200px",
+      width: "150px",
+      padding: 0,
+      backgtoundColor:"#FFF",
+      filter: "drop-shadow(0px 0px 5px #666)"
+    }
     return (
       <div>
-        <p> {movies[0].title} </p>
-        <img src={movies[0].image} alt="image" />;
+        <img style= {cardStyle} src={movies[0].image} alt="image" />
       </div>
     )
   }
