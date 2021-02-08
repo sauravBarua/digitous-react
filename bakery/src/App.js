@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       activeTab: 'Add',
-      items: [],
+      items: []
     }
   }
 
@@ -43,13 +43,12 @@ class App extends React.Component {
     this.setState({
       items: newItems
     })
-    console.log(this.state.items)
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="App-header">
           <div className="row">
             <Button isSelected={this.state.activeTab === "Add" ? "form-control btn btn-primary" : "form-control btn btn-light"} onClick={this.selectAdd}>Add</Button>
             <Button isSelected={this.state.activeTab === "List" ? "form-control btn btn-primary" : "form-control btn btn-light"} onClick={this.selectList}>List</Button>
@@ -60,7 +59,7 @@ class App extends React.Component {
             {this.state.activeTab === "List" && <List items={this.state.items}></List>}
             {this.state.activeTab === "Pay" && <Pay></Pay>}
           </div>
-        </header>
+        </div>
       </div>
     );
   }

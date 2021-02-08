@@ -7,9 +7,7 @@ class List extends React.Component {
                 <p>List</p>
                 <ul>
                     {this.props.items.map((items, index) => {
-                        return (
-                            <li key={index}> {items.name} : {items.price}€</li>
-                        );
+                        return ( <li key={index}> {items.name} : {items.price}€</li> );
                     })}
                 </ul>
             </div>

@@ -11,19 +11,18 @@ class Add extends React.Component {
 
   updateItemName = (e) => {
     this.setState({
-      productName: e.target.value,
+      productName: e.target.value
     });
   };
 
   updatePrice = (e) => {
     this.setState({
-      price: e.target.value,
+      price: e.target.value
     });
   };
 
   add = () => {
     this.props.addItems(this.state.productName, this.state.price);
-    console.log("fonction add =", this.state.productName, this.state.price);
   };
 
   render() {
@@ -33,25 +32,18 @@ class Add extends React.Component {
         <div className="input-group mb-3">
           <input
             onChange={this.updateItemName}
-            type="text"
-            className="form-control"
-            placeholder="Enter item"
-          />
+            type="text"className="form-control"placeholder="Enter item"/>
           <button
             className="btn btn-outline-secondary"
             type="button"
-            onClick={this.add}
-          >
+            onClick={this.add}>
             Add
           </button>
         </div>
         <input
-          min="1"
-          max="10"
-          type="range"
+          min="1"max="10"type="range"
           onChange={this.updatePrice}
-          value={this.state.price}
-        ></input>
+          value={this.state.price}></input>
         <p>{this.state.price}€</p>
       </div>
     );
