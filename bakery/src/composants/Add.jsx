@@ -36,8 +36,6 @@ class Add extends React.Component {
             type="text"
             className="form-control"
             placeholder="Enter item"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
           />
           <button
             className="btn btn-outline-secondary"
