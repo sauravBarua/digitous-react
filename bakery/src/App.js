@@ -1,69 +1,69 @@
-import React from 'react'
+import React from "react";
+import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Add from './composants/Add';
-import List from './composants/List';
-import Pay from './composants/Pay';
-import Button from './composants/Button';
+import List from "./components/List";
+import Pay from "./components/Pay";
+import Add from "./components/Add";
+import Button from "./components/Button"
 
-
-export default class App extends React.Component {
-  
-  constructor(props){
-    super(props);
+class App extends React.Component {
+  constructor(props) {
+    super(props)
     this.state = {
-      activeTab:'',
-      isSelected:''
+      activeTab: 'Add',
+      items: [],
     }
   }
 
-  selectAdd = (event)=>{
+  selectAdd = () => {
     this.setState({
-      activeTab:"add"
+      activeTab: "Add"
     })
   }
 
-  selectList = (event)=>{
+  selectList = () => {
     this.setState({
-      activeTab:"list"
-    })
-  }
-  
-  selectPay = (event)=>{
-    this.setState({
-      activeTab:"pay"      
+      activeTab: "List"
     })
   }
 
-  checkTab(toCheck){
-    if(this.state.activeTab == toCheck){
-      return true
-    }else{
-      return false
+  selectPay = () => {
+    this.setState({
+      activeTab: "Pay"
+    })
+  }
+
+  addItem = (name, price) => {
+    const items = {
+      name: name,
+      price: price
     }
+    const newItems = this.state.items;
+    newItems.push(items)
+    this.setState({
+      items: newItems
+    })
+    console.log(this.state.items)
   }
 
-  renderContent(){
-    switch(this.state.activeTab){
-      case "add":
-        return <Add></Add>
-      case "list":
-        return <List></List>
-      case "pay":
-        return <Pay></Pay>
-      default:
-        return <Add></Add>
-    }
-  }
-  
-  
   render() {
     return (
-      <div>
-        <Button onClick= {this.selectAdd} isSelected ={this.state.checkTab('add')} >Add </Button>
-        <Button onClick= {this.selectList} isSelected ={this.state.checkTab('list')} >List</Button>
-        <Button onClick= {this.selectPay} isSelected ={this.state.checkTab('pay')} >Pay</Button>
-        {this.renderContent()}
+      <div className="App">
+        <header className="App-header">
+          <div className="row">
+            <Button isSelected={this.state.activeTab === "Add" ? "form-control btn btn-primary" : "form-control btn btn-light"} onClick={this.selectAdd}>Add</Button>
+            <Button isSelected={this.state.activeTab === "List" ? "form-control btn btn-primary" : "form-control btn btn-light"} onClick={this.selectList}>List</Button>
+            <Button isSelected={this.state.activeTab === "Pay" ? "form-control btn btn-primary" : "form-control btn btn-light"} onClick={this.selectPay}>Pay</Button>
+          </div>
+          <div className="row">
+            {this.state.activeTab === "Add" && <Add addItems={this.addItem}></Add>}
+            {this.state.activeTab === "List" && <List items={this.state.items}></List>}
+            {this.state.activeTab === "Pay" && <Pay></Pay>}
+          </div>
+        </header>
       </div>
-    )
+    );
   }
 }
+
+export default App;
