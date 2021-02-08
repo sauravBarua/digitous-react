@@ -24,17 +24,15 @@ const movies = [
 ];
 
   
-  
-  
-
  class App extends React.Component {
   render() {
     var cardStyle = {
       height: "200px",
       width: "150px",
       padding: 0,
+      margin: " 10px",
       backgtoundColor:"#FFF",
-      filter: "drop-shadow(0px 0px 5px #666)"
+      filter: "drop-shadow(0px 0px 5px #666)",
     }
     return (
       <div>
