@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class popular extends Component {
+export default class WeeklyBattle extends Component {
     render() {
         return (
             <div>
-                popular
+                <h1>WeeklyBattle</h1>
             </div>
         )
     }
