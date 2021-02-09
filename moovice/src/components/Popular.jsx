@@ -12,12 +12,12 @@ export default class Popular extends Component {
         .then((response) => {return response.json();})
         .then((response) => {
             this.setState({
-                name: response.name
+                movies: response.name
             });
         })
         .catch((response) => {
             this.setState({
-                name: "Erreur lors de la recuperation"
+                movies: "Erreur lors de la recuperation"
             });
         })
 	}
@@ -25,7 +25,6 @@ export default class Popular extends Component {
         return (
             <div>
               <h1>Popular</h1>
-
             </div>
         )
     }
