@@ -18,12 +18,12 @@ import Favorites from "./components/Favorites";
     return (
       <Router>
             <Switch>
-                <Route exact path='/' component={Home}>Home</Route>
-                <Route path='/weekly' component={Weekly}>weekly</Route>
-                <Route path='/weekly-battle' component={WeeklyBattle} >weekly-battle</Route>
-                <Route path='/popular'component={Popular}>popular</Route>
-                <Route path='/popular-battle'component={PopularBattle} >popular-battle</Route>
-                <Route path='/favorites'component={Favorites} >favorites</Route>
+                <Route exact path='/' component={Home}/>
+                <Route path='/weekly' component={Weekly}/>
+                <Route path='/weekly-battle' component={WeeklyBattle} />
+                <Route path='/popular'component={Popular}/>
+                <Route path='/popular-battle'component={PopularBattle} />
+                <Route path='/favorites'component={Favorites} />
               
             </Switch>
         </Router>
