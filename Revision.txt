@@ -1,3 +1,4 @@
+
 - Pourquoi React ?
 Ans: Framework front-end (SPA)single page application 
 - Ecrivez un composant React qui affiche un titre h1 avec marqué "Bonjour" suivi du nom passé en props.
@@ -28,7 +29,7 @@ class Promo extends React.Component {
 
 	render() {
 		return (
-		<p>firstName: {this.apprenants[0].apprenants} lastName: {this.apprenants[0].lastName} </p>
+		<p>firstName: {this.apprenants[0].firstName} lastName: {this.apprenants[0].lastName} </p>
 		);
 	}
 }
@@ -68,6 +69,7 @@ export default Form;
 
 
 - A quoi sert une fonction de callback asynchrone A quoi sert une fonction de callback asynchrone ?
+Ans: LIFO (Last in, First out) structure.
 - Quelle est la différence entre une fonction de callback et une promesse ?
 - Expliquez du mieux possible le cycle de vie d'un composant React.
 Ans: React appelle automatiquement la méthode responsable.
