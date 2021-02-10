@@ -12,7 +12,9 @@ class App extends React.Component {
             <img src={movie.image} />
            <p>Titre: {movie.title}</p>
            <p>Directeur: {movie.director}</p>
-           <p>Acteurs: {movie.stars}</p>
+           <p>Stars: {movie.stars.map((star)=>{
+             return <span> {star}, </span>
+           })}</p>
            </div>
            )
         
