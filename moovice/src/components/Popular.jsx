@@ -24,11 +24,11 @@ import React, { Component } from "react";
     return (
       <div>
         <ul>
-          {this.state.movies.map(movie=>(
+          {this.state.movies.map((movie)=>{
             <li>
-              title: {movie.title}
+              {movie.title}
             </li>
-          ))}
+          })}
         </ul>
       </div>
     )
