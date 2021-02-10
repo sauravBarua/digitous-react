@@ -1,4 +1,4 @@
-export const movies = [
+ const movies = [
   {
 		id : 1,
     title: "A Wrinkle in Time",
@@ -80,3 +80,5 @@ export const movies = [
       "Ballerina Dominika Egorova is recruited to 'Sparrow School,' a Russian intelligence service where she is forced to use her body as a weapon. Her first mission, targeting a C.I.A. agent, threatens to unravel the security of both nations.",
   }
 ];
+
+export default movies ;

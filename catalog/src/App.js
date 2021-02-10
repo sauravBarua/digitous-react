@@ -1,33 +1,17 @@
-import React from "react";
-import About from "./Components/About";
-import Home from "./Components/Home";
+import React from 'react'
+import movies from './movies'
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-export default function BasicExample() {
- 
-  return (
-    <Router>
+class App extends React.Component {
+  render() {
+    return (
       <div>
-        <nav >
-          
-          <Link to="/Home">Home</Link>
-
-          <Link to="/About">About</Link>
-        </nav>
-
-        <hr />
-
-        <Switch>
-          
-          <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/About">
-            <About />
-          </Route>
-        </Switch>
+         <h2>Titre: {movies[0].title}</h2>
+                <img src={movies[0].image} />
+                <h3>Directeur: {movies[0].director}</h3>
+                <h3>Acteurs: {movies[0].stars}</h3>
+        
       </div>
-    </Router>
-  );
+    )
+  }
 }
+export default App;

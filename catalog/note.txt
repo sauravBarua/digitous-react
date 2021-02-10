@@ -54,3 +54,5 @@ var headingStyle ={
   padding:"15px"
 }
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
