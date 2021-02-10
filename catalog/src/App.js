@@ -5,11 +5,21 @@ class App extends React.Component {
   render() {
     return (
       <div>
-         <h2>Titre: {movies[0].title}</h2>
-                <img src={movies[0].image} />
-                <h3>Directeur: {movies[0].director}</h3>
-                <h3>Acteurs: {movies[0].stars}</h3>
+
+        {movies.map((movie)=>{
+           return (
+            <div>
+            <img src={movie.image} />
+           <p>Titre: {movie.title}</p>
+           <p>Directeur: {movie.director}</p>
+           <p>Acteurs: {movie.stars}</p>
+           </div>
+           )
         
+
+        })}
+        
+               
       </div>
     )
   }
