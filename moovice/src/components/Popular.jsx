@@ -15,7 +15,7 @@ class Popular extends React.Component {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log("I am from json",data)
         this.setState({
           movies: [...data.results],
         });
@@ -26,10 +26,16 @@ class Popular extends React.Component {
   }
 
   render() {
+    console.log("I am from render",this.state.movies[0])
+
 
     return (
       <div>
         Popular
+        {this.state.movies.map((movie)=>{
+          return <p> {movie.title} </p>
+        })}
+       
       </div>
     );
   }
