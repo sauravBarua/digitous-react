@@ -7,8 +7,8 @@ import image from './Image/Film-High-Quality-PNG.png';
         return (
             <div>
                 <p>Title: {this.props.title}  </p>
-                <img src={image} alt="image" />
-                <p>Release_date: {this.props.release_date}</p>
+                <img style={{width: "10%"}} src={image} alt="image" />
+                <p>Release date: {this.props.release_date}</p>
                 <p>Overview: {this.props.overview}</p>
             </div>
         )

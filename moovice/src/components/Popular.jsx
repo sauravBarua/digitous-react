@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card"
+import Card from "./Card";
 
 class Popular extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Popular extends React.Component {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log("I am from json",data)
+        console.log("I am from json", data);
         this.setState({
           movies: [...data.results],
         });
@@ -27,22 +27,22 @@ class Popular extends React.Component {
   }
 
   render() {
-    console.log("I am from render",this.state.movies[0])
-
+    console.log("I am from render", this.state.movies[0]);
 
     return (
       <div>
-        Popular
-        {this.state.movies.map((movie)=>{
+         <h1 style={{color: "red"}} >Popular Movies</h1>
+        {this.state.movies.map((movie) => {
           return (
-          <div>
-          <p> {movie.title} </p>
-            <p> {movie.release_date} </p>
-            <p> {movie.overview} </p>
+            <div>
+              <Card
+                title={movie.title}
+                release_date={movie.release_date}
+                overview={movie.overview}
+              />
             </div>
-            )
+          );
         })}
-       
       </div>
     );
   }
