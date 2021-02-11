@@ -1,14 +1,15 @@
 import React from 'react'
 import Popular from './Popular'
+import image from './Image/Film-High-Quality-PNG.png'; 
 
  class Card extends React.Component {
     render() {
         return (
             <div>
-                <img></img>
-                <Popular/>
-                <p>release_date</p>
-                <p>overview</p>
+                <p>Title: {this.props.title}  </p>
+                <img src={image} alt="image" />
+                <p>Release_date: {this.props.release_date}</p>
+                <p>Overview: {this.props.overview}</p>
             </div>
         )
     }

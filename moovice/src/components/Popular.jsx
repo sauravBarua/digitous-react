@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card"
 
 class Popular extends React.Component {
   constructor(props) {
@@ -33,7 +34,13 @@ class Popular extends React.Component {
       <div>
         Popular
         {this.state.movies.map((movie)=>{
-          return <p> {movie.title} </p>
+          return (
+          <div>
+          <p> {movie.title} </p>
+            <p> {movie.release_date} </p>
+            <p> {movie.overview} </p>
+            </div>
+            )
         })}
        
       </div>
