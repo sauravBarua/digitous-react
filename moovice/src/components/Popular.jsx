@@ -18,7 +18,7 @@ class Popular extends React.Component {
       .then((data) => {
         console.log("I am from json", data);
         this.setState({
-          movies: [...data.results],
+          movies:data.results,
         });
       })
       .catch((err) => {
@@ -27,9 +27,7 @@ class Popular extends React.Component {
   }
 
   render() {
-    console.log("I am from render", this.state.movies[0]);
     
-
     return (
       <div>
          <h1 style={{color: "red"}} >Popular Movies</h1>
