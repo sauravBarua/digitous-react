@@ -7,6 +7,7 @@ import WeeklyBattle from "./components/WeeklyBattle";
 import Popular from "./components/Popular";
 import PopularBattle from "./components/PopularBattle";
 import Favorites from "./components/Favorites";
+import Card from "./components/Card"
 
 
 
@@ -24,6 +25,7 @@ import Favorites from "./components/Favorites";
                 <Route path='/popular'component={Popular}/>
                 <Route path='/popular-battle'component={PopularBattle} />
                 <Route path='/favorites'component={Favorites} />
+                <Route path='/Card'component={Card} />
               
             </Switch>
         </Router>
