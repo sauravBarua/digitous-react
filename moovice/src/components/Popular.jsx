@@ -28,6 +28,7 @@ class Popular extends React.Component {
 
   render() {
     console.log("I am from render", this.state.movies[0]);
+    
 
     return (
       <div>
@@ -35,7 +36,7 @@ class Popular extends React.Component {
         {this.state.movies.map((movie) => {
           return (
             <div>
-              <Card
+              <Card  
                 title={movie.title}
                 release_date={movie.release_date}
                 overview={movie.overview}
