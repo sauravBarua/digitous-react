@@ -27,10 +27,10 @@ class Popular extends React.Component {
   }
 
   render() {
-    
+
     return (
-      <div>
-         <h1 style={{color: "red"}} >Popular Movies</h1>
+      <div >
+        
         {this.state.movies.map((movie) => {
           return (
             <div>
