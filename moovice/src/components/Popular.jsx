@@ -37,9 +37,7 @@ class Popular extends React.Component {
           return (
             <div>
               <Card  
-                title={movie.title}
-                release_date={movie.release_date}
-                overview={movie.overview}
+                {...movie}
               />
             </div>
           );
