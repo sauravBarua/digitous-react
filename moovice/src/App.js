@@ -2,11 +2,11 @@ import React from 'react'
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/Home";
-import Weekly from "./components/Weekly";
-import WeeklyBattle from "./components/WeeklyBattle";
+import Weekly from "./components/weekly";
+import WeeklyBattle from "./components/weekly-battle";
 import Popular from "./components/Popular";
-import PopularBattle from "./components/PopularBattle";
-import Favorites from "./components/Favorites";
+import PopularBattle from "./components/popular-battle";
+import Favorites from "./components/favorites";
 import Card from "./components/Card"
 
 

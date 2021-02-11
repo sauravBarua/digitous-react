@@ -1,4 +1,5 @@
 import React from "react";
+import Card from './Card'
 
 class PopularBattle extends React.Component {
   constructor(props) {
@@ -6,7 +7,7 @@ class PopularBattle extends React.Component {
 
     this.state = {
       movies: [],
-      currentBattle: 0,
+      currentBattle:0
     };
   }
 
@@ -25,12 +26,27 @@ class PopularBattle extends React.Component {
         console.log(err);
       });
   }
+
+
+ 
   render() {
+    const flim = this.state.movies[0];
+    console.log("I am from render",flim);
     return (
       <div>
-        <h1>PopularBattle</h1>
-        
-      </div>
+      <h1 style={{color: "red"}} >Popular Battle</h1>
+     {this.state.movies.map((movie) => {
+       return (
+         <div>
+           <Card  
+             title={flim.title}
+             release_date={flim.release_date}
+             overview={flim.overview}
+           />
+         </div>
+       );
+     })}
+   </div>
     );
   }
 }
