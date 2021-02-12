@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import "./Popular.css";
+
 
 class Popular extends React.Component {
   constructor(props) {
@@ -29,11 +31,11 @@ class Popular extends React.Component {
   render() {
 
     return (
-      <div >
+      <div className="row"  >
         
         {this.state.movies.map((movie) => {
           return (
-            <div>
+            <div className="column">
               <Card  
                 {...movie}
               />
