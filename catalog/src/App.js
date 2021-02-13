@@ -1,36 +1,14 @@
-import React from "react";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
-import "./App.css";
-import Film from "./Components/Film";
-import movies from "./movies";
+import React, { Component } from "react";
+import Home from "./Components/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-class App extends React.Component {
+
+export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <nav class="navbar navbar-light bg-light">
-          <div class="container-fluid">
-            {movies.map((movie) => {
-              return (
-                <span class="navbar-brand mb-0 h1">
-                  <Link to={`/movie/${movie.id}`}> <img src={movie.image}alt="image" /></Link>
-                </span>
-              );
-            })}
-          </div>
-        </nav>
-
-        <Switch>
-          <Route
-            path="/movie/:id"
-            render={(props) => {
-              return <Film {...props} />;
-            }}
-          />
-        </Switch>
-      </BrowserRouter>
+      <div>
+        <Home />
+      </div>
     );
   }
 }
-
-export default App;
