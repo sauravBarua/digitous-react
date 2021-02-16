@@ -28,15 +28,17 @@ export default class Home extends Component {
               {movies.map((movie) => {
                 return (
                   <span class="navbar-brand mb-0 h1">
-                    <button onClick={() => this.props.history.push(`/movie/${movie.id}`)}>
-                    <img
+                    <button
+                      onClick={() =>
+                        this.props.history.push(`/movie/${movie.id}`)
+                      }
+                    >
+                      <img
                         style={cardStyle}
                         src={movie.image}
                         alt={`movies title ${movie.title}`}
-                        
                       />
-            </button>
-                     
+                    </button>
                   </span>
                 );
               })}

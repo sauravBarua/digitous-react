@@ -14,26 +14,36 @@ export default class Movies extends Component {
             </Link>
           </a>
         </nav>
-        {movies
-          .filter((movie) => {
-            return movie.id === parseInt(this.props.match.params.id);
-          })
-          .map((movie) => {
-            return (
-              <div>
-                <img src={movie.image} alt={`movies title ${movie.title}`} />
-                <h4>Titre: {movie.title}</h4>
-                <p>Directeur: {movie.director}</p>
-                <p>
-                  Stars:
-                  {movie.stars.map((star) => {
-                    return <p>{star}</p>;
-                  })}
-                </p>
-                <p className="description">Description: {movie.description}</p>
-              </div>
-            );
-          })}
+        <div class="jumbotron">
+          {movies
+            .filter((movie) => {
+              return movie.id === parseInt(this.props.match.params.id);
+            })
+            .map((movie) => {
+              return (
+                <div className="card">
+                <div className="row no-gutters">
+                    <div className="col-auto">
+                    <img src={movie.image} alt={`movies title ${movie.title}`} />
+        
+                    </div>
+                    <div className="col">
+                        <div className="card-block px-2">
+                            <h6 className="card-title">Titre: {movie.title}</h6>
+                            <p className="card-text">Directeur: {movie.director}</p>
+                             <p className="card-text">Stars:
+                            {movie.stars.map((star) => {
+                              return <p>{star}</p>;
+                            })}</p>
+                            <p className="card-text">Description: {movie.description}</p>
+                        </div>
+                    </div>
+                </div>
+                
+          </div>
+              );
+            })}
+        </div>
       </div>
     );
   }
