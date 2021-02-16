@@ -18,7 +18,9 @@ export default class Home extends Component {
         <BrowserRouter>
           <nav className="navbar navbar-light bg-warning">
             <a className="navbar-brand font-weight-bold">
-              <Link className=" text-danger text-decoration-none" to="/Home">Movies</Link>
+              <Link className=" text-danger text-decoration-none" to="/Home">
+                Movies
+              </Link>
             </a>
           </nav>
           <nav class="navbar navbar-light bg-light">
@@ -26,21 +28,20 @@ export default class Home extends Component {
               {movies.map((movie) => {
                 return (
                   <span class="navbar-brand mb-0 h1">
-                    <Link to={`/movie/${movie.id}`}> <img  style= {cardStyle} src={movie.image} alt={`movies title ${movie.title}`} /></Link>
+                    <button onClick={() => this.props.history.push(`/movie/${movie.id}`)}>
+                    <img
+                        style={cardStyle}
+                        src={movie.image}
+                        alt={`movies title ${movie.title}`}
+                        
+                      />
+            </button>
+                     
                   </span>
                 );
               })}
             </div>
           </nav>
-          <Switch>
-          <Route
-            path="/movie/:id"
-            render={(props) => {
-              return <Movies {...props} />;
-            }}
-          />
-        </Switch>
-
         </BrowserRouter>
       </div>
     );

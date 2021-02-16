@@ -1,4 +1,4 @@
- <img src={movies[0].image} />
-                <h3>Directeur: {movies[0].director}</h3>
-                <h3>Acteurs: {movies[0].stars}</h3>
-        
+<Route exact path="/movie/:id" render={(props) => {return <Movies {...props} />;}}/>
+
+ <Link to={`/movie/${movie.id}`}>
+                    </Link>
